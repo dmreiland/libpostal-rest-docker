@@ -11,6 +11,4 @@ export GOROOT=/libpostal/go
 export GOPATH=/libpostal/workspace
 export PATH=$PATH:/libpostal/go/bin
 
-go get github.com/dmreiland/libpostal-rest
-
-go install github.com/dmreiland/libpostal-rest
+go install github.com/dmreiland/libpostal-rest@latest
