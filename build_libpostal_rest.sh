@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 set -e
 
-curl https://storage.googleapis.com/golang/go1.8.1.linux-amd64.tar.gz > go1.8.1.linux-amd64.tar.gz
+curl https://storage.googleapis.com/golang/go1.17.linux-amd64.tar.gz > go1.17.linux-amd64.tar.gz
 
-echo "a579ab19d5237e263254f1eac5352efcf1d70b9dacadb6d6bb12b0911ede8994  go1.8.1.linux-amd64.tar.gz" | sha256sum -c
+echo "6bf89fc4f5ad763871cf7eac80a2d594492de7a818303283f1366a7f6a30372d  go1.17.linux-amd64.tar.gz" | sha256sum -c
 
-tar xzf go1.8.1.linux-amd64.tar.gz
+tar xzf go1.17.linux-amd64.tar.gz
 
 export GOROOT=/libpostal/go
 export GOPATH=/libpostal/workspace
 export PATH=$PATH:/libpostal/go/bin
 
-go get github.com/johnlonganecker/libpostal-rest
+go get github.com/dmreiland/libpostal-rest
 
-go install github.com/johnlonganecker/libpostal-rest
+go install github.com/dmreiland/libpostal-rest
